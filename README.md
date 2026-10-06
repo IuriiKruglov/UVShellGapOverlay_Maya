@@ -1,3 +1,7 @@
+| | | |
+| :---: | :---: | :---: |
+| [![UVShell_GapM_3](https://github.com/user-attachments/assets/6af35f98-ec55-469b-bb3b-69ec1ada2b30)](https://github.com/user-attachments/assets/6af35f98-ec55-469b-bb3b-69ec1ada2b30) | [![UVShell_GapM_2](https://github.com/user-attachments/assets/052b6d82-4f4f-4828-ae06-0eac898dc681)](https://github.com/user-attachments/assets/052b6d82-4f4f-4828-ae06-0eac898dc681) | [![UVShell_GapM_1](https://github.com/user-attachments/assets/ef03af87-348c-47b7-8068-0db8d50227c9)](https://github.com/user-attachments/assets/ef03af87-348c-47b7-8068-0db8d50227c9) |
+
 # UV Shell Gap Overlay for Maya
 
 A Maya tool that shows, on your UV layout, how many texture pixels separate neighboring UV shells, how far shells sit from their UDIM tile border, and the texel density of every shell. Gap measurements are color-graded against the padding you need. Texel density is color-graded against the density you need, in the tool's UV view and on the mesh in the 3D viewport. Each shell gets one compact info block with its density, its object's scale, whether it is flipped, and an arrow showing which way is up in the scene. Material sets let you select and hide the shells of chosen materials and measure gaps only within a material. Problems are called out where they happen: overlapping shells, shells crossing a tile border, and flipped (mirrored) shells.
