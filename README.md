@@ -585,25 +585,6 @@ For very large layouts, lower *Points per Shell*: the gap measurement grows with
 
 ---
 
-## Troubleshooting
-
-- **The view says "Select meshes…".** Select a mesh, a group, or components of a mesh. Objects in component mode count too.
-- **"No UVs on the shown faces".** The mesh's current UV set is empty. Pick another UV set in the UV Editor.
-- **Numbers look too small or too large.** Check *Texture → Size*: distances and densities scale with the resolution.
-- **The view is black, flickers or misdraws.** Turn off **Settings → Draw the View on the GPU**. If the window can't be used at all, set the environment variable `UVGAP_NO_GPU=1` before starting Maya, or run `import os; os.environ["UVGAP_NO_GPU"] = "1"` in the Script Editor before opening the window.
-- **It is slow.** The gray line under the Summary says where the time goes. *read* is Maya handing over the meshes, *shells* and *gaps* are the tool's own work, *draw* is one redraw of the view. Please include that line when you report a slow scene.
-- **Copies I stacked are reported as overlaps.** They cover each other by less than the *Stack Match*. Lower it (99 %, say), or select them with *Overlapping* and fit them onto each other. When there are many overlaps, the *Overlaps and Stacks* section says so.
-- **A click doesn't select.** While the layout is dimmed, the shells are being read again and clicks wait for them. If nothing is dimmed, check the toolbar: a click picks what is chosen there (UV, Edge, Face, Shell).
-- **The keys Q W E R don't switch the tool.** Move the mouse pointer over the view first; while a number is being typed in the window, the keys go to that field.
-- **Rotate turns the wrong way, or a tool does something unexpected.** Run **Settings → Run Self-Test**: it checks what every tool does in your Maya and names what differs.
-- **Low and High keep changing.** *Auto Low / High* is on and the checked material sets, the shown meshes or the texture size changed. Type a value, or untick *Auto Low / High*, to keep your own values.
-- **No colors in the 3D viewport.** Check that *In 3D Viewport* is ticked, the viewport uses Viewport 2.0 and Isolate Select is off. If the Script Editor says the 3D overlay is not available, open *Windows → Settings/Preferences → Plug-in Manager* and look for `uvGapOverlay.py`.
-- **The NumPy prompt comes back every time.** NumPy went somewhere this Maya's Python doesn't look. Run the command under [Installation](#installation) for your Maya version and restart Maya.
-- **The window is empty after restarting Maya.** If Maya restored the docked window before the tool could load, close it and open it again with the shelf button.
-- **Something went wrong.** The tool prints each error once to the Script Editor, and the window's status line says so. **Settings → Run Self-Test** checks the whole chain in your Maya and prints a report.
-
----
-
 ## Changelog
 
 **1.1.0**
